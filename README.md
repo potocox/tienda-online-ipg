@@ -14,4 +14,4 @@ Aplicación web tipo e-commerce donde los usuarios pueden autenticarse, ver prod
 ## Autor
 
 Sebastian Gonzalez 
-Instituto Profesional IPG
+-Instituto Profesional IPG
