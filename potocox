@@ -1,0 +1,56 @@
+import zipfile
+
+# Estructura base del proyecto "tienda-online-ipg"
+project_structure_updated = {
+    "tienda-online-ipg/": [
+        "package.json",
+        "vite.config.js",
+        "index.html",
+        "tailwind.config.js",
+        "postcss.config.js"
+    ],
+    "tienda-online-ipg/public/": [],
+    "tienda-online-ipg/src/": [
+        "main.jsx",
+        "App.jsx",
+        "index.css"
+    ],
+    "tienda-online-ipg/src/components/": [
+        "Navbar.jsx",
+        "ProductCard.jsx",
+        "CartItem.jsx",
+        "ProtectedRoute.jsx"
+    ],
+    "tienda-online-ipg/src/pages/": [
+        "Home.jsx",
+        "ProductDetail.jsx",
+        "Cart.jsx",
+        "Checkout.jsx",
+        "Login.jsx",
+        "Register.jsx",
+        "Profile.jsx"
+    ],
+    "tienda-online-ipg/src/redux/": [
+        "store.js"
+    ],
+    "tienda-online-ipg/src/redux/slices/": [
+        "authSlice.js",
+        "cartSlice.js"
+    ],
+    "tienda-online-ipg/src/services/": [
+        "api.js"
+    ],
+    "tienda-online-ipg/src/firebase/": [
+        "config.js"
+    ]
+}
+
+# Crear archivo ZIP
+zip_filename = "tienda-online-ipg-base.zip"
+with zipfile.ZipFile(zip_filename, 'w') as zipf:
+    for folder, files in project_structure_updated.items():
+        for file in files:
+            path = folder + file
+            zipf.writestr(path, "// Archivo base: " + file + "\n")
+
+print(f"ZIP generado exitosamente: {zip_filename}")
